@@ -1,7 +1,7 @@
 # shopping_list_manager.py
 
 def display_menu():
-    print("Shopping List Manager")  # Corrected this line
+    print(f"\n\"Shopping List Manager\"")  # Corrected to use f-string with quotes
     print("1. Add Item")
     print("2. Remove Item")
     print("3. View List")
@@ -40,4 +40,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
