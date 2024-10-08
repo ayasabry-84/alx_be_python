@@ -6,7 +6,7 @@ class BankAccount:
     def deposit(self, amount):
         """Add the specified amount to account_balance."""
         self.account_balance += amount  # Update the balance
-        print(f"Deposited: ${amount:.1f}")  # Ensure to print with one decimal place
+        
 
     def withdraw(self, amount):
         """Deduct the amount from account_balance if funds are sufficient."""
