@@ -1,19 +1,23 @@
+# bank_account.py
 class BankAccount:
-    def __init__(self, account_balance = 0 ):
+    def __init__(self, account_balance=0):  # Default balance is 0
         self.account_balance = account_balance
-    
+
     def deposit(self, amount):
-        self.account_balance += amount
-        print(f"Deposited: {amount}. New balance: {self.account_balance}")
+        """Add the specified amount to account_balance."""
+        self.account_balance += amount  # Update the balance
+        print(f"Deposited: ${amount}")
 
     def withdraw(self, amount):
+        """Deduct the amount from account_balance if funds are sufficient."""
         if amount <= self.account_balance:
-            self.account_balance -= amount 
-            print(f"Withdrew: {amount}. New balance: {self.account_balance}")
+            self.account_balance -= amount  # Deduct the amount
             return True
         else:
-            print("Insufficient funds.")
             return False
 
     def display_balance(self):
-        print(f"Current balance: {self.account_balance}")
+        """Print the current balance in a user-friendly format."""
+        # Ensure the format matches the expected output
+        print(f"Current Balance: ${self.account_balance}")  # Adjusted output
+
