@@ -10,14 +10,15 @@ def main():
         print("Commands: deposit, withdraw, display")
         sys.exit(1)
 
+    # Parse the command
     command, *params = sys.argv[1].split(':')
     amount = float(params[0]) if params else None
 
     if command == "deposit" and amount is not None:
-        account.deposit(amount)
+        account.deposit(amount)  # Call deposit method only once
     elif command == "withdraw" and amount is not None:
         if account.withdraw(amount):
-            print(f"Withdrew: ${amount}")
+            print(f"Withdrew: ${amount:.1f}")
         else:
             print("Insufficient funds.")
     elif command == "display":
